@@ -17,19 +17,23 @@ class HomePage extends StatelessWidget {
         scrolledUnderElevation: 0,
         actions: [
           IconButton(
-              onPressed: () {}, icon: const Icon(FontAwesomeIcons.cartPlus))
+            onPressed: () {},
+            icon: const Icon(FontAwesomeIcons.cartPlus),
+          ),
         ],
         centerTitle: true,
         title: const Text(
           'New Trend',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(
           left: 16,
           right: 16,
-          top: 60,
+          top: 62,
           bottom: 30,
         ),
         child: FutureBuilder<List<ProductModel>>(
@@ -43,8 +47,8 @@ class HomePage extends StatelessWidget {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   childAspectRatio: 1.5,
-                  crossAxisSpacing: 20,
-                  mainAxisSpacing: 70,
+                  crossAxisSpacing: 30,
+                  mainAxisSpacing: 80,
                 ),
                 itemCount: snapshot.data!.length,
                 itemBuilder: (context, index) {

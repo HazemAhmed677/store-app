@@ -8,7 +8,7 @@ class AllProductsService {
     List<ProductModel> products = [];
     try {
       for (int i = 0; i < response.length; i++) {
-        products.add(ProductModel.fromJson(response[i]));
+        products.add(ProductModel.fromJson1(response[i]));
       }
     } catch (e) {
       print(e.toString());

@@ -16,7 +16,7 @@ class ProductModel {
     this.rate,
   });
 
-  factory ProductModel.fromJson(json) {
+  factory ProductModel.fromJson1(json) {
     return ProductModel(
       id: json['id'],
       title: json['title'],
@@ -27,7 +27,7 @@ class ProductModel {
       rate: Rating.fromJson(json['rating']),
     );
   }
-  factory ProductModel.fromJsonUpdate(json) {
+  factory ProductModel.fromJson2(json) {
     return ProductModel(
       id: json['id'],
       title: json['title'],

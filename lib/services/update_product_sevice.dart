@@ -25,8 +25,7 @@ class UpdateProductService {
         .put(url: kUpdateUrl(id.toString()), body: body, token: token);
 
     updatedProduct['price'] = double.parse(updatedProduct['price']);
-    ProductModel res = ProductModel.fromJsonUpdate(updatedProduct);
     if (true) {}
-    return ProductModel.fromJsonUpdate(updatedProduct);
+    return ProductModel.fromJson2(updatedProduct);
   }
 }

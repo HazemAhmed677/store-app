@@ -5,11 +5,19 @@ import 'package:store_app/models/product_model.dart';
 import 'package:store_app/services/update_product_sevice.dart';
 import 'package:store_app/widgets/custom_text_field.dart';
 
-class UpdatePage extends StatelessWidget {
-  UpdatePage({super.key});
+class UpdatePage extends StatefulWidget {
+  const UpdatePage({super.key});
   static String id = 'Update Page';
+
+  @override
+  State<UpdatePage> createState() => _UpdatePageState();
+}
+
+class _UpdatePageState extends State<UpdatePage> {
   String title = '', desc = '', image = '';
+
   double price = 0.0;
+
   @override
   Widget build(BuildContext context) {
     ProductModel productModel =
@@ -21,7 +29,9 @@ class UpdatePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(FontAwesomeIcons.cartPlus),
+            icon: const Icon(
+              FontAwesomeIcons.cartPlus,
+            ),
           ),
         ],
         backgroundColor: Colors.white,

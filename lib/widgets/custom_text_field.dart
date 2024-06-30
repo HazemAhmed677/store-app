@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CustomTextField extends StatelessWidget {
-  CustomTextField({
+  const CustomTextField({
     required this.onChanged,
     required this.hint,
     required this.label,
@@ -10,9 +9,10 @@ class CustomTextField extends StatelessWidget {
     super.key,
   });
   final String label;
-  TextInputType? type;
+  final TextInputType? type;
   final String hint;
-  Function(String) onChanged;
+  final Function(String) onChanged;
+
   @override
   Widget build(BuildContext context) {
     return TextField(

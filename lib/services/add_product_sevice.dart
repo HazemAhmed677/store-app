@@ -20,6 +20,6 @@ class AddProductSevice {
       'category': category,
     };
     Map<String, String> response = await Api().post(url: kPostUrl, body: body);
-    return ProductModel.fromJson(response);
+    return ProductModel.fromJson2(response);
   }
 }
